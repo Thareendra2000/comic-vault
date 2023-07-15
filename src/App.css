@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Belanosima&family=Montserrat:wght@800;900&family=Nunito+Sans:wght@300&family=Open+Sans&family=Ysabeau+Office:wght@500&family=Zilla+Slab&display=swap');
+:root {
+  --comic-text-title-font: 'Bangers', cursive;
+  --comic-text-body-font: 'Zilla Slab', serif;
+  --comic-text-font-style: normal;
+  --comic-text-font-weight: 400;
+  --comic-text-letter-spacing: 1px;
+  --comic-text-line-height: normal;
+  --white: rgba(255, 255, 255, 1);
+  --red: rgba(185, 1, 0, 1);
+  --dark: rgba(59, 1, 0, 1);
+}
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: var(--comic-text-body-font);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+  margin: 0;
+  padding: auto;
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  background-color: var(--dark);
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-title{
+  font-family: var(--comic-text-title-font);
+  font-size: 24px;
+  color: var(--white);
+  padding-left: 20px;
+  padding: auto;
+  letter-spacing: var(--comic-text-letter-spacing);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  background-image: url(./images/badmanredbg.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height:auto;
+  width: 100%;
+  margin: 0;
+}
+.hero-content{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 400px;
+  padding-bottom: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+  font-size: 60px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.waviy span {
+  font-family: var(--comic-text-title-font);
+  font-size: 128px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  /* text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i)); */
+  
+}
+.waviy span:hover{
+  color: var(--red);
+  transition: 0.5s;
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    transform: translateY(-20px)
+  }
+}
+.herp-title{
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-red{
+  background-color: var(--red);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
+  font-family: var(--comic-text-body-font);
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
+.btn-red:hover{
+  background-color: var(--white);
+  color: var(--red);
+  transition: 0.5s;
+}
+/* -----Footer----- */
+.footer{
+  background-color: var(--dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  
+}
+.footer h3{
+  font-weight: 500;
+}
+
+/* -------Carousal------- */
+.carousal{
+  position: relative;
+  width:auto;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(180deg, rgb(185, 1, 0) 0%, rgb(59, 1, 0) 100%);
+  padding: 40px;
+}
+.comic-card{
+  width:250px;
+  display: flex ;
+  flex-direction: column;
+  margin: 20px;
+  height: 460px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--red);
+  cursor: pointer;
+}
+.comic-card:hover{
+  transform: scale(1.05, 1.05);
+  transition: 0.5s;
+}
+
+.comic-cover{
+  width: 250px;
+  height: 400px;
+  border-radius: 5px;
+}
+.comic-title{
+  font-family: var(--comic-text-body-font);
+  font-size: 16px;
+  color: var(--white);
+  text-align: center;
+  font-weight: 300;
+}
+
+/* -----search----- */
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  background-color: var(--red);
+  border: none;
+}
+.search-bar{
+  width: 30%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  padding-left: 10px;
+  font-family: var(--comic-text-body-font);
+  font-size: 16px;
+  color: var(--white);
+  background-color: transparent;
+  margin: 0;
+}
+.search-bar:focus{
+  outline: none;
+}
+.search-bar::placeholder{
+  color: var(--white);
+}
+.search-btn{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.search-icon{
+  padding: 10px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+/*------media queries------*/
+@media screen and (max-width: 600px){
+  .nav-title{
+    font-size: 16px;
+  }
+  .nav{
+    height: auto;
+  }
+  .hero-content{
+    padding-top: 200px;
+  }
+  .waviy{
+    font-size: 32px;
+  }
+  .waviy span{
+    font-size: 64px;
+  }
+  .btn-red{
+    font-size: 16px;
+  }
+  .footer h3{
+    font-size: 16px;
+  }
+  .comic-card{
+    width: 200px;
+    height: auto;
+  }
+  .comic-cover{
+    width: 200px;
+    height: auto;
+  }
+  .comic-title{
+    font-size: 16px;
+  }
+  .search-bar{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 320px){
+  .nav-title{
+    font-size: 16px;
+  }
+  .nav{
+    height: auto;
+  }
+  .hero-content{
+    padding-top: 200px;
+  }
+  .waviy{
+    font-size: 32px;
+  }
+  .waviy span{
+    font-size: 64px;
+  }
+  .btn-red{
+    font-size: 16px;
+  }
+  .footer h3{
+    font-size: 16px;
+  }
+  .comic-card{
+    width: 250px;
+    height: auto;
+  }
+  .comic-cover{
+    width: 250px;
+    height: auto;
+  }
+  .comic-title{
+    font-size: 16px;
+  }
+  .search-bar{
+    width: 50%;
   }
 }
