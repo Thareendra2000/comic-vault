@@ -1,15 +1,16 @@
 # Comic vault
 
-Comic Viewer is a React application that allows users to explore and search for comics using the Marvel Comics API. It provides an interactive interface where users can discover and view various comic books, characters, series, and events.
+Comic Vault is a React application that allows users to explore and search for comics using the Marvel Comics API. It provides an interactive interface where users can discover and view various comic books, characters, series, and events.
+### [Deployed wesite](https://comic-vault.netlify.app/)
 
 ## Features
 
 - Search Functionality: Users can enter keywords to search for specific comics based on titles.
-- Smooth Scrolling: When the "Get Started" button is clicked, the page smoothly scrolls to the comic carousal section.
+- Smooth Scrolling: When the "Get Started" button is clicked, the page smoothly scrolls to the comic section.
 
 ## Getting Started
 
-1. Clone the repository: git clone https://github.com/your-username/comic-viewer.git
+1. Clone the repository: `git clone git@github.com:Thareendra2000/comic-vault.git`
 2. Install dependencies: `npm install`
 3. Set up Marvel API Keys: Obtain your Marvel API public and private keys from https://developer.marvel.com/ and add them to the .env file.
 3. Start the application: `npm start`
