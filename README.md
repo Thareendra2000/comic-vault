@@ -21,7 +21,7 @@ Comic Vault is a React application that allows users to explore and search for c
 - Marvel Comics API: Provides access to a wide range of Marvel comic-related data.
 - CSS: Styling the user interface.
 
-![localhost_3000_%20(2)_compressed](https://github.com/Thareendra2000/comic-vault/assets/97722096/a53d4d9c-3e54-46e7-9f9a-676ce7ba4fca)
+![localhost_3000_%20(2)_compressed](https://github.com/Thareendra2000/comic-vault/assets/97722096/a0077b12-8e0d-47ec-857b-9fcc2e1cebab)
 
 ## Acknowledgments
 [Marvel Comics API](https://developer.marvel.com/): Data source for comic-related information.
